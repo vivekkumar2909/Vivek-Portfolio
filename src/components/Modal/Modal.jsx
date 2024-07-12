@@ -1,36 +1,40 @@
 /* eslint-disable react/prop-types */
 import './Modal.scss';
-import Aisass from '../../assets/Ai-sass.png';
+import Aisaas1 from '../../assets/aisaas1.png';
+import Aisaas2 from '../../assets/aisaas2.png';
+import Aisaas3 from '../../assets/aisaas3.png';
+import Aisaas4 from '../../assets/aisaas4.png';
+import Aisaas5 from '../../assets/aisaas5.png';
 // import React from 'react';
 // import {Link} from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
+// import { AnimatePresence } from 'framer-motion'
 
 import { CgCloseO } from "react-icons/cg";
 import { useEffect } from 'react';
 
-export default function Modal({setShowModal}) {
+export default function Modal({ setShowModal }) {
 
-    const handleChangeImg = function(e){
-        console.log( "Event",e.target);
+    const handleChangeImg = function (e) {
+        console.log("Event", e.target);
     }
 
     // const [showModal,setShowModel] = useState();
 
-    useEffect(()=>{
+    useEffect(() => {
         document.body.style.overflow = "hidden";
         return () => {
             document.body.style.overflow = "auto";
         }
-    },[])
+    }, [])
 
     return (
         <div className='modal' >
             <div className='scroll_model'>
-            <div className='cross1'>
-                    <CgCloseO className='cross' onClick={() => {setShowModal(false)} }/>
-            </div>
+                <div className='cross1'>
+                    <CgCloseO className='cross' onClick={() => { setShowModal(false) }} />
+                </div>
                 <div className='Heading'>
-                
+
                     <h1 >
                         Ai-SAAS
                     </h1>
@@ -50,12 +54,12 @@ export default function Modal({setShowModal}) {
 
                 <div className='container'>
                     <div className='image-con'>
-                        <img src={Aisass} alt='pro' />
+                        <img src={Aisaas1} alt='pro' />
                         <div className='image_con2'>
-                            <img onClick={handleChangeImg} className='items' src={Aisass} alt='pro' />
-                            <img onMouseEnter={handleChangeImg} className='items' src={Aisass} alt='pro' />
-                            <img className='items' src={Aisass} alt='pro' />
-                            <img className='items' src={Aisass} alt='pro' />
+                            <img onClick={handleChangeImg} className='items' src={Aisaas2} alt='pro' />
+                            <img onMouseEnter={handleChangeImg} className='items' src={Aisaas3} alt='pro' />
+                            <img className='items' src={Aisaas4} alt='pro' />
+                            <img className='items' src={Aisaas5} alt='pro' />
                         </div>
                     </div>
 

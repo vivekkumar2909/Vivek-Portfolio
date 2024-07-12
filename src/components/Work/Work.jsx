@@ -20,7 +20,7 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      
+
       setFilterWork(data);
     });
   }, []);
@@ -50,7 +50,7 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {['Backend','UI/UX', 'Web App', 'Next JS', 'React JS', 'All'].map((item, index) => (
+        {['Backend', 'UI/UX', 'Web App', 'Next JS', 'React JS', 'All'].map((item, index) => (
           <div
             key={index + 1}
             onClick={() => handleWorkFilter(item)}
@@ -70,9 +70,10 @@ const Work = () => {
           <div className="app__work-item app__flex" key={index}>
             <div
               className="app__work-img app__flex"
+              onClick={handleModal}
             >
               <img src={urlFor(work.imgUrl)} alt={work.name} />
-              
+
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
@@ -86,7 +87,7 @@ const Work = () => {
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
-                    <AiFillEye onClick={handleModal} />
+                    <AiFillEye />
                   </motion.div>
                 </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
@@ -115,7 +116,7 @@ const Work = () => {
       </motion.div>
 
       {showModal && <>
-        <Modal setShowModal ={setShowModal}/>
+        <Modal setShowModal={setShowModal} />
       </>}
     </>
   );

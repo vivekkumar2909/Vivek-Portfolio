@@ -48,7 +48,7 @@
   align-items: center;
 
   .app__work-item {
-    width: 300px;
+    width: 500px;
     flex-direction: column;
 
     margin: 2rem;
@@ -69,12 +69,24 @@
       padding: 1.25rem;
       border-radius: 1rem;
     }
+    @media screen and (max-width: 1200px) {
+      width: 400px;
+      // padding: 1.25rem;
+      // margin: 1rem;
+      border-radius: 1rem;
+    }
 
     @media screen and (max-width: 400px) {
       // width: 100%;
       width: 200px;
+      // margin: 2rem;
       margin: 1rem;
-      
+    }
+    @media screen and (max-width: 620px) {
+      // width: 100%;
+      width: 350px;
+      // margin: 2rem;
+      margin: 1rem;
     }
   }
 }

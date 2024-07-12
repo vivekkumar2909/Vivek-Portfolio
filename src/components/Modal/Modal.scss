@@ -66,23 +66,34 @@
       height: 350px;
       border-radius: 1rem;
       object-fit: contain;
+      object-fit: cover;
       flex-direction: column;
       // overflow: hidden;
+
+      padding: 10px;
       position: relative;
 
       @media screen and (max-width: 900px) {
-        width: 80%;
+        width: 95%;
+      }
+      @media screen and (min-width: 900px) {
+        width: 90%;
       }
 
       img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+        // overflow: hidden;
       }
     }
 
     @media screen and (max-width: 800px) {
       flex-wrap: wrap;
+    }
+    @media screen and (max-width: 1000px) {
+      flex-wrap: wrap;
+      gap: 100px;
     }
   }
 }
@@ -97,7 +108,10 @@
   position: relative;
 
   @media screen and (max-width: 900px) {
-    width: 80%;
+    width: 95%;
+  }
+  @media screen and (min-width: 900px) {
+    width: 90%;
   }
 
   img {
@@ -112,6 +126,10 @@
   font-size: large;
   // padding: 15px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 60px;
+  }
 }
 
 .para {
@@ -142,30 +160,33 @@
   margin-top: 10px;
 }
 
-.image_con2{
+.image_con2 {
   display: flex;
   width: 22%;
   gap: 20px;
-  
-  img{
+  // border: 2px solid white;
+
+  img {
     margin-top: 20px;
     margin-left: 4px;
+    // border: 2px solid white;
+    border-radius: 3px;
   }
 }
 
-.cross1{
+.cross1 {
   display: flex;
   justify-content: end;
-  
-  .cross{
+
+  .cross {
     cursor: pointer;
     padding-top: 20px;
     padding-right: 30px;
     color: black;
-  font-size: 5rem;
+    font-size: 5rem;
   }
 }
 
-.scroll_model{
+.scroll_model {
   overflow-y: scroll;
 }
