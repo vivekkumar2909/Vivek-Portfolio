@@ -28,7 +28,7 @@ function User() {
     axios.get('https://leetcode-stats-api.herokuapp.com/Vivek_Kumar-29/').then((result) => {
       console.log(result);
       //   // setQuestionsDone(result.data);
-      //   // console.log('hii', questionsDone);
+      //   // console.log('hii', questionsDone?);
     }).catch((err) => {
       console.log(err);
     });
@@ -37,15 +37,15 @@ function User() {
   console.log('hii', questionsDone);
 
 
-  // const percentageEasySolved = (questionsDone.easySolved / questionsDone.totalEasy) * 100;
-  // const percentageMediumSolved = (questionsDone.mediumSolved / questionsDone.totalMedium) * 100;
-  // const percentageHardSolved = (questionsDone.hardSolved / questionsDone.totalHard) * 100;
+  const percentageEasySolved = (questionsDone?.easySolved / questionsDone?.totalEasy) * 100;
+  const percentageMediumSolved = (questionsDone?.mediumSolved / questionsDone?.totalMedium) * 100;
+  const percentageHardSolved = (questionsDone?.hardSolved / questionsDone?.totalHard) * 100;
 
-  // let totalSolvedQuestion = (questionsDone.totalSolved / questionsDone.totalQuestions) * 100;
+  let totalSolvedQuestion = (questionsDone?.totalSolved / questionsDone?.totalQuestions) * 100;
 
-  // totalSolvedQuestion = Math.round(totalSolvedQuestion * 100) / 100;
+  totalSolvedQuestion = Math.round(totalSolvedQuestion * 100) / 100;
 
-  // console.log(percentageEasySolved, percentageMediumSolved, percentageHardSolved, totalSolvedQuestion)
+  console.log(percentageEasySolved, percentageMediumSolved, percentageHardSolved, totalSolvedQuestion)
 
   return (
     <>
@@ -57,14 +57,14 @@ function User() {
 
         <div className='app_User-container'>
 
-          {/* <div className='box'>
+          <div className='box'>
 
             <div className='User_heading'>
               <div>LeetCode: </div>
               <h3> <strong>Vivek_kumar030929</strong></h3>
             </div>
             <div className='solved'>
-              Solved:  {<strong>{questionsDone.totalSolved} / {questionsDone.totalQuestions}</strong>}
+              Solved:  {<strong>{questionsDone?.totalSolved} / {questionsDone?.totalQuestions}</strong>}
             </div>
 
             <div className='stat_container'>
@@ -75,17 +75,17 @@ function User() {
               </div>
               <div className="linear_box">
                 <div className="gap_box">
-                  <div className="questions">Easy: {questionsDone.easySolved} / {questionsDone.totalEasy}</div>
+                  <div className="questions">Easy: {questionsDone?.easySolved} / {questionsDone?.totalEasy}</div>
                   <div className="line">
                     <div className="linear_progress" style={{ width: `${percentageEasySolved}%` }}>
                     </div>
                   </div>
-                  <div className="questions">Medium: {questionsDone.mediumSolved} /{questionsDone.totalMedium}</div>
+                  <div className="questions">Medium: {questionsDone?.mediumSolved} /{questionsDone?.totalMedium}</div>
                   <div className="line1">
                     <div className="linear_progress1" style={{ width: `${percentageMediumSolved}%` }}>
                     </div>
                   </div>
-                  <div className="questions">Hard: {questionsDone.hardSolved} / {questionsDone.totalHard}</div>
+                  <div className="questions">Hard: {questionsDone?.hardSolved} / {questionsDone?.totalHard}</div>
                   <div className="line2">
                     <div className="linear_progress2" style={{ width: `${percentageHardSolved}%` }}>
                     </div>
@@ -101,7 +101,7 @@ function User() {
               <h3> <strong>Vivek_kumar030929</strong></h3>
             </div>
             <div className='solved'>
-              Solved:  {<strong>{questionsDone.totalSolved} / {questionsDone.totalQuestions}</strong>}
+              Solved:  {<strong>{questionsDone?.totalSolved} / {questionsDone?.totalQuestions}</strong>}
             </div>
 
             <div className='stat_container'>
@@ -112,17 +112,17 @@ function User() {
               </div>
               <div className="linear_box">
                 <div className="gap_box">
-                  <div className="questions">Easy: {questionsDone.easySolved} / {questionsDone.totalEasy}</div>
+                  <div className="questions">Easy: {questionsDone?.easySolved} / {questionsDone?.totalEasy}</div>
                   <div className="line">
                     <div className="linear_progress" style={{ width: `${percentageEasySolved}%` }}>
                     </div>
                   </div>
-                  <div className="questions">Medium: {questionsDone.mediumSolved} /{questionsDone.totalMedium}</div>
+                  <div className="questions">Medium: {questionsDone?.mediumSolved} /{questionsDone?.totalMedium}</div>
                   <div className="line1">
                     <div className="linear_progress1" style={{ width: `${percentageMediumSolved}%` }}>
                     </div>
                   </div>
-                  <div className="questions">Hard: {questionsDone.hardSolved} / {questionsDone.totalHard}</div>
+                  <div className="questions">Hard: {questionsDone?.hardSolved} / {questionsDone?.totalHard}</div>
                   <div className="line2">
                     <div className="linear_progress2" style={{ width: `${percentageHardSolved}%` }}>
                     </div>
@@ -130,7 +130,7 @@ function User() {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
 
 
         </div>

@@ -9,7 +9,7 @@ import Aisaas5 from '../../assets/aisaas5.png';
 // import {Link} from 'react-router-dom'
 // import { AnimatePresence } from 'framer-motion'
 
-import { CgCloseO } from "react-icons/cg";
+import { IoClose } from "react-icons/io5";
 import { useEffect } from 'react';
 
 export default function Modal({ setShowModal }) {
@@ -31,7 +31,7 @@ export default function Modal({ setShowModal }) {
         <div className='modal' >
             <div className='scroll_model'>
                 <div className='cross1'>
-                    <CgCloseO className='cross' onClick={() => { setShowModal(false) }} />
+                    <IoClose className='cross' onClick={() => { setShowModal(false) }} />
                 </div>
                 <div className='Heading'>
 
