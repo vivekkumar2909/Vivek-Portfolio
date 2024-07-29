@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { BsOpencollective } from "react-icons/bs";
 import { motion } from 'framer-motion';
 import Modal from '../Modal/Modal';
 import AppWrap from '../../wrapper/AppWrap';
@@ -14,6 +15,8 @@ const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [showModal, setShowModal] = useState(false)
+  const [showModal1, setShowModal1] = useState(false)
+  const [showModal2, setShowModal2] = useState(false)
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -27,6 +30,15 @@ const Work = () => {
 
   const handleModal = () => {
     setShowModal(!showModal);
+    console.log(showModal);
+    console.log("handle")
+  }
+  const handleModal1 = () => {
+    setShowModal1(!showModal1);
+    console.log("handle")
+  }
+  const handleModal2 = () => {
+    setShowModal2(!showModal2);
     console.log("handle")
   }
 
@@ -44,6 +56,20 @@ const Work = () => {
       }
     }, 500);
   };
+
+  const nameHandler = (title) => {
+    console.log(title);
+    if (title === 'Budget-Trecker') {
+      handleModal()
+    }
+    if (title === 'IMDB-Clone') {
+      console.log(title);
+      handleModal1()
+    }
+    if (title === 'Ai SaaS') {
+      handleModal2()
+    }
+  }
 
   return (
     <>
@@ -70,7 +96,7 @@ const Work = () => {
           <div className="app__work-item app__flex" key={index}>
             <div
               className="app__work-img app__flex"
-              onClick={handleModal}
+
             >
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
@@ -100,6 +126,18 @@ const Work = () => {
                     <AiFillGithub />
                   </motion.div>
                 </a>
+
+                <motion.div
+                  whileInView={{ scale: [0, 1] }}
+                  whileHover={{ scale: [1, 0.90] }}
+                  transition={{ duration: 0.25 }}
+                  className="app__flex"
+                >
+                  <BsOpencollective onClick={() =>
+                    nameHandler(work.title)
+                  } />
+                </motion.div>
+
               </motion.div>
             </div>
 

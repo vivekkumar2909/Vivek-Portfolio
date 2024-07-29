@@ -10,20 +10,12 @@ import Aisaas5 from '../../assets/aisaas5.png';
 // import { AnimatePresence } from 'framer-motion'
 
 import { IoClose } from "react-icons/io5";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Modal({ setShowModal }) {
 
-
-    const [image, setImage] = useState(Aisaas1);
-
     const handleChangeImg = function (e) {
         console.log("Event", e.target.src);
-        setImage(e.target.src);
-    }
-    const handleChangeImgOut = function () {
-        // console.log("Event", e.target.src);
-        setImage(Aisaas1);
     }
 
 
@@ -43,9 +35,7 @@ export default function Modal({ setShowModal }) {
                 <div className='Heading'>
 
                     <h1 >
-
                         Ai-SAAS
-
                     </h1>
                 </div>
                 <div >
@@ -53,24 +43,22 @@ export default function Modal({ setShowModal }) {
                 </div>
                 <div className='Demo'>
                     <div className='Demo-live'>
-
-                        <a href='' rel="noreferrer">LIVE DEMO</a>
-
+                        LIVE DEMO
                     </div>
                     <div className='Demo-live'>
-                        <a href='' > SOURCE CODE</a>
+                        SOURCE CODE
                     </div>
                 </div>
 
 
                 <div className='container'>
                     <div className='image-con'>
-                        <img src={image} alt='pro' />
+                        <img src={Aisaas1} alt='pro' />
                         <div className='image_con2'>
-                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={Aisaas2} alt='pro' />
-                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={Aisaas3} alt='pro' />
-                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={Aisaas4} alt='pro' />
-                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={Aisaas5} alt='pro' />
+                            <img onClick={handleChangeImg} className='items' src={Aisaas2} alt='pro' />
+                            <img onMouseEnter={handleChangeImg} className='items' src={Aisaas3} alt='pro' />
+                            <img className='items' src={Aisaas4} alt='pro' />
+                            <img className='items' src={Aisaas5} alt='pro' />
                         </div>
                     </div>
 
