@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 
-import  AppWrap from '../../wrapper/AppWrap';
+import AppWrap from '../../wrapper/AppWrap';
 // import  MotionWrap from '../../wrapper/MotionWrap';
 import { images } from '../../constants';
+import mainLogo from './../../assets/mainLogo.png'
 import './Header.scss';
 
 const scaleVariants = {
@@ -47,7 +48,7 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={images.profile} alt="profile_bg" />
+      <img src={mainLogo} alt="profile_bg" />
       <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}

@@ -20,25 +20,19 @@ const About = () => {
 
   return (
     <>
-    <div className="heading">
-      <h1 >Introduction</h1>
+      <div className="heading">
+        <h1 >Introduction</h1>
 
-      <div className='Subheading'>
-        A Little About Me..
-      </div>
+        <div className='Subheading'>
+          A Little About Me..
+        </div>
 
-      <p>
-      As a BTech Computer Engineering graduate, I bring a robust skill set in cutting-edge technologies and 
-      problem-solving capabilities to the table. Proficient in Next.js and React, I've developed dynamic and 
-      responsive user interfaces that enhance user experiences. My expertise extends to MongoDB and PrismaDB, 
-      enabling me to architect efficient and scalable backend systems. With a solid foundation in C++, I excel 
-      in backend development, crafting robust and optimized solutions. I have honed my problem-solving skills through 
-      extensive practice on platforms like LeetCode, where I tackle complex algorithmic challenges with precision and 
-      creativity. My diverse skill set and dedication to excellence make me a valuable asset to any team aiming to innovate 
-      and thrive in the rapidly evolving landscape of technology.
-      </p>
+        <p>
+          I am a BTech Computer Engineering graduate with a robust skill set in cutting-edge technologies and problem-solving capabilities. Using Next JS and React JS, I have developed dynamic and responsive user interfaces that enrich the user experience. Moreover, my areas of expertise include MySql and PrismaDB Client; therefore, I can architect an efficient and scalable backend system. On the backend, I am excellent at developing robust and optimized solutions with a strong foundation in C++. I have honed my problem-solving skills through constant practice on LeetCode and other such platforms, particularly the development of precise and creative solutions to complex algorithmic challenges. It is these diverse skill sets that, together with my dedication to excellence, make me a valuable asset for any team aiming to create innovation and thrive in a fast-moving technology environment.
+        </p>
 
       </div>
+      {/* <a href='https://www.sharda.ac.in/'> */}
 
       <div className='app__flex'>
         <div className="app__profiles">
@@ -57,6 +51,7 @@ const About = () => {
           ))}
         </div>
       </div>
+      {/* </a> */}
     </>
   );
 };

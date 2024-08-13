@@ -12,7 +12,7 @@ import Aisaas5 from '../../assets/aisaas5.png';
 import { IoClose } from "react-icons/io5";
 import { useEffect } from 'react';
 
-export default function Modal({ setShowModal }) {
+export default function Modal2({ setShowModal }) {
 
     const handleChangeImg = function (e) {
         console.log("Event", e.target.src);

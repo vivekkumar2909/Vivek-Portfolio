@@ -1,21 +1,28 @@
 /* eslint-disable react/prop-types */
 import './Modal.scss';
-import Aisaas1 from '../../assets/aisaas1.png';
-import Aisaas2 from '../../assets/aisaas2.png';
-import Aisaas3 from '../../assets/aisaas3.png';
-import Aisaas4 from '../../assets/aisaas4.png';
-import Aisaas5 from '../../assets/aisaas5.png';
+import budget from './../../assets/budget.png'
+import budget1 from './../../assets/budget1.png'
+import budget2 from './../../assets/budget2.png'
+import budget3 from './../../assets/budget3.png'
+import budget4 from './../../assets/budget4.png'
 // import React from 'react';
 // import {Link} from 'react-router-dom'
 // import { AnimatePresence } from 'framer-motion'
 
 import { IoClose } from "react-icons/io5";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function Modal({ setShowModal }) {
+export default function Modal1({ setShowModal }) {
+
+    const [image, setImage] = useState(budget4);
 
     const handleChangeImg = function (e) {
         console.log("Event", e.target.src);
+        setImage(e.target.src);
+    }
+    const handleChangeImgOut = function () {
+        // console.log("Event", e.target.src);
+        setImage(budget4);
     }
 
 
@@ -53,12 +60,12 @@ export default function Modal({ setShowModal }) {
 
                 <div className='container'>
                     <div className='image-con'>
-                        <img src={Aisaas1} alt='pro' />
+                        <img src={image} alt='pro' />
                         <div className='image_con2'>
-                            <img onClick={handleChangeImg} className='items' src={Aisaas2} alt='pro' />
-                            <img onMouseEnter={handleChangeImg} className='items' src={Aisaas3} alt='pro' />
-                            <img className='items' src={Aisaas4} alt='pro' />
-                            <img className='items' src={Aisaas5} alt='pro' />
+                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={budget1} alt='pro' />
+                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={budget2} alt='pro' />
+                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={budget} alt='pro' />
+                            <img onMouseEnter={handleChangeImg} onMouseOut={handleChangeImgOut} className='items' src={budget3} alt='pro' />
                         </div>
                     </div>
 

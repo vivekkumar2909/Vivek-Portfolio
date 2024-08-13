@@ -4,6 +4,8 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { BsOpencollective } from "react-icons/bs";
 import { motion } from 'framer-motion';
 import Modal from '../Modal/Modal';
+import Modal1 from '../Modal/Modal1';
+import Modal2 from '../Modal/modal2'
 import AppWrap from '../../wrapper/AppWrap';
 import MotionWrap from '../../wrapper/MotionWrap';
 import { urlFor, client } from '../../client';
@@ -153,9 +155,12 @@ const Work = () => {
         ))}
       </motion.div>
 
-      {showModal && <>
-        <Modal setShowModal={setShowModal} />
-      </>}
+      {
+        showModal && <Modal1 setShowModal={setShowModal} />
+      }
+      {
+        showModal1 && <Modal2 setShowModal={setShowModal1} />
+      }
     </>
   );
 };
