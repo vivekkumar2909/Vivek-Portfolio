@@ -70,18 +70,19 @@ export default function Modal1({ setShowModal }) {
                     </div>
 
                     <div className='image-con1'>
-                        <h1 className='description'>
-                            Description
-                        </h1>
+                        <div className='description'>
+                            <strong >
+                                Description
+                            </strong>
+                        </div>
 
                         <p className='para'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            This would hence be a website where all expenses and income were to be tracked on a yearly, monthly, and weekly basis. It is user-friendly, linking them very easily to make it easy for you to navigate through the website without worrying about getting the latest version of the website. It helps to realize the value of money spent by you on unnecessary things that you do not need to do. There are three sections in the website: manage, transaction, and dashboard. You can add, delete, and check history of income and expenses under the dashboard section. In the Manage section, you'll be able to manage your profile and currency category, among other things. The Transaction section will allow the downloading of history in CSV form with pagination, both for income and expense. All of these are going to be accessed by an authenticated user only.
                         </p>
+                        <div className='tech'>
 
-                        <h1 className='tech'>Technology Used</h1>
+                            <strong>Technology Used</strong>
+                        </div>
 
                         <div className='tech_used'>
                             <div>

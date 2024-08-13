@@ -141,7 +141,20 @@
   margin: 10px;
   font-size: large;
   // padding: 15px;
+  color: #313bac;
+  // border: #fff solid 1px;
   text-transform: uppercase;
+  margin-bottom: 10px;
+  strong {
+    font-size: 2rem;
+    color: #313bac;
+    // margin-bottom: 10px;
+    border: #fff solid 1px;
+    padding: 0px 20px;
+    border-radius: 10px;
+
+    // margin-bottom: 10px;
+  }
 
   @media screen and (max-width: 800px) {
     margin-top: 60px;
@@ -151,13 +164,31 @@
 .para {
   margin: 10px;
   // padding: 10px;
+  margin-top: 20px;
 }
 
 .tech {
-  font-size: large;
+  // font-size: 2rem;
+  // color: #313bac;
+  // // margin-bottom: 10px;
+  // border: #fff solid 1px;
+  // padding: 0px 20px;
+  // border-radius: 10px;
   margin: 10px;
+  font-size: large;
+  // padding: 15px;
+  color: #313bac;
+  // border: #fff solid 1px;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  strong {
+    font-size: 2rem;
+    color: #313bac;
+    // margin-bottom: 10px;
+    border: #fff solid 1px;
+    padding: 0px 20px;
+    border-radius: 10px;
+  }
 }
 
 .tech_used {
