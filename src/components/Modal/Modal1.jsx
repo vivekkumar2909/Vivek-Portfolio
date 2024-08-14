@@ -50,10 +50,14 @@ export default function Modal1({ setShowModal }) {
                 </div>
                 <div className='Demo'>
                     <div className='Demo-live'>
-                        LIVE DEMO
+                        <a href='https://vivek-portfolio-kappa.vercel.app/' target="_blank" rel="noreferrer">
+                            LIVE DEMO
+                        </a>
                     </div>
                     <div className='Demo-live'>
-                        SOURCE CODE
+                        <a href='https://github.com/vivekkumar2909/Budget-Tracker' target="_blank" rel="noreferrer">
+                            SOURCE CODE
+                        </a>
                     </div>
                 </div>
 
@@ -85,19 +89,19 @@ export default function Modal1({ setShowModal }) {
                         </div>
 
                         <div className='tech_used'>
-                            <div>
+                            <div className='boarderClass'>
                                 React
                             </div>
-                            <div>
+                            <div className='boarderClass'>
                                 Next Js
                             </div>
-                            <div>
+                            <div className='boarderClass'>
                                 MongoDb
                             </div>
-                            <div>
+                            <div className='boarderClass'>
                                 Tailwind CSS
                             </div>
-                            <div>
+                            <div className='boarderClass'>
                                 PrismaDb
                             </div>
                         </div>
@@ -107,14 +111,27 @@ export default function Modal1({ setShowModal }) {
                         </h1>
 
                         <p className='para'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            <div>
+                                1. User Authentication: Secure login, password recovery, and restricted access for authenticated users only.
+                            </div>
+                            <div>
+                                2. Dashboard: Track income and expenses across different periods, manage transaction history, and visualize spending with charts.
+                            </div>
+
+                            <div>
+
+                                3. Manage Section: Update profile details, and manage currency preferences and expense categories.
+                            </div>
+
+                            <div>
+
+                                4. Transaction Section: Download transaction history in CSV format with pagination support.
+                            </div>
+                            <div>
+                                5. User Interface: Intuitive, responsive design with real-time updates for seamless navigation.
+                            </div>
+
                         </p>
 
                     </div>
