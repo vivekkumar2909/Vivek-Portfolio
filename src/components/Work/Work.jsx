@@ -161,6 +161,9 @@ const Work = () => {
       {
         showModal1 && <Modal2 setShowModal={setShowModal1} />
       }
+      {
+        showModal2 && <Modal setShowModal={setShowModal2} />
+      }
     </>
   );
 };

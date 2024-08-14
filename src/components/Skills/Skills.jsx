@@ -1,10 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {Tooltip} from 'react-tooltip';
+import { Tooltip } from 'react-tooltip';
 
-import  AppWrap from '../../wrapper/AppWrap';
-import  MotionWrap from '../../wrapper/MotionWrap';
+import AppWrap from '../../wrapper/AppWrap';
+import MotionWrap from '../../wrapper/MotionWrap';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 
@@ -43,7 +43,7 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src ={urlFor(skill.icon)} alt={skill.name} />
+                <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>
@@ -58,6 +58,7 @@ const Skills = () => {
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
+              <div className='circleDot'></div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
@@ -65,13 +66,14 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
-                      data-tooltip-content = {work.description}
+                      data-tooltip-content={work.description}
                       data-tooltip-id={work.name}
                       key={work.name}
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
+
                     <Tooltip
                       id={work.name}
                       effect="solid"

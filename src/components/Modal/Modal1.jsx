@@ -42,7 +42,7 @@ export default function Modal1({ setShowModal }) {
                 <div className='Heading'>
 
                     <h1 >
-                        Ai-SAAS
+                        Budget Tracker
                     </h1>
                 </div>
                 <div >
