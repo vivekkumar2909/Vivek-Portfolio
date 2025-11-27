@@ -10,6 +10,23 @@ import './Navbar.scss';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const previewURL =
+    "https://drive.google.com/file/d/11paP4YjLnUoST017OJ2JlTXadEw91_f8/view?usp=sharing";
+
+  const downloadURL =
+    "https://drive.google.com/uc?export=download&id=11paP4YjLnUoST017OJ2JlTXadEw91_f8";
+
+  const handleResumeClick = () => {
+    // Open preview
+    window.open(previewURL, "_blank");
+
+    // Trigger download
+    const link = document.createElement("a");
+    link.href = downloadURL;
+    link.download = "Vivek_Kumar_Resume.pdf";
+    link.click();
+  };
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -25,17 +42,16 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <a href='https://drive.google.com/file/d/11paP4YjLnUoST017OJ2JlTXadEw91_f8/view?usp=drive_link'
+      <motion.div
+        className="Resume"
+        whileHover={{ scale: 1.1 }}
+        onClick={handleResumeClick}
+      >
+        <motion.p whileTap={{ scale: 0.8 }} transition={{ delay: 0.1 }}>
+          My Resume
+        </motion.p>
+      </motion.div>
 
-        download="Vivek_Kumar_Resume.pdf">
-        <motion.div className='Resume'
-          whileHover={{ scale: 1.1 }}
-          // whileTap={{ scale: 0.8 }}
-          transition={{ delay: .1 }}
-        >
-          <motion.p whileTap={{ scale: 0.8 }} transition={{ delay: .1 }} >My Resume</motion.p>
-        </motion.div>
-      </a>
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
