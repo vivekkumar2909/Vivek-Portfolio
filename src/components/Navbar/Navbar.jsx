@@ -25,7 +25,9 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <a href='https://drive.google.com/file/d/11paP4YjLnUoST017OJ2JlTXadEw91_f8/view?usp=drive_link' target="_blank" rel="noreferrer" download="Vivek_Kumar_Resume.pdf">
+      <a href='https://drive.google.com/file/d/11paP4YjLnUoST017OJ2JlTXadEw91_f8/view?usp=drive_link'
+
+        download="Vivek_Kumar_Resume.pdf">
         <motion.div className='Resume'
           whileHover={{ scale: 1.1 }}
           // whileTap={{ scale: 0.8 }}
