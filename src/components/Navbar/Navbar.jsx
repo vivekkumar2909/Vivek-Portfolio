@@ -11,10 +11,10 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const previewURL =
-    "https://drive.google.com/file/d/11paP4YjLnUoST017OJ2JlTXadEw91_f8/view?usp=sharing";
+    "https://drive.google.com/file/d/1A6WpH4bprXzmI3ctW5ZioPmgEtzp2G56/view?usp=sharing";
 
   const downloadURL =
-    "https://drive.google.com/uc?export=download&id=11paP4YjLnUoST017OJ2JlTXadEw91_f8";
+    "https://drive.google.com/uc?export=download&id=1A6WpH4bprXzmI3ctW5ZioPmgEtzp2G56";
 
   const handleResumeClick = () => {
     // Open preview
